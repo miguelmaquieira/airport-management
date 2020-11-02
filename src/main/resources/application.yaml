@@ -1,0 +1,21 @@
+spring:
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: airportmanagement
+      auto-index-creation: true
+
+logging:
+  level:
+    root: ERROR
+    org:
+      springframework: INFO
+      springframework.data.mongodb.core.MongoTemplate: DEBUG
+
+mongock:
+  change-logs-scan-package: com.knowmad.airportmanagement.repository.migration
+  start-system-version: 0.0.1
+  enabled: true
+  index-creation: true
+
